@@ -1,0 +1,33 @@
+{
+  "name": "@amosbastian/database",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Database package for amosbastian",
+  "license": "MIT",
+  "author": "amosbastian",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "lint": "biome lint --write .",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@effect/sql": "0.18.14",
+    "@effect/sql-drizzle": "0.17.3",
+    "@effect/sql-pg": "0.19.3",
+    "effect": "3.10.8"
+  },
+  "devDependencies": {
+    "@amosbastian/tsconfig": "workspace:^",
+    "@types/node": "22.8.6"
+  },
+  "packageManager": "pnpm@9.12.0"
+}

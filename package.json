@@ -1,19 +1,17 @@
 {
-  "name": "effect-http-reproduction",
-  "private": true,
+  "name": "amosbastian",
+  "version": "0.0.0",
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "biome format --write && prettier -w \"apps/**/*.astro\" --ignore-unknown --cache --check"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "@biomejs/biome": "1.9.1",
+    "@amosbastian/tsconfig": "workspace:^",
+    "@tsconfig/node20": "20.1.4",
+    "prettier": "^3.3.3",
+    "tsx": "4.19.2",
     "turbo": "^2.2.3",
-    "typescript": "5.5.4"
+    "typescript": "5.6.3"
   },
-  "packageManager": "pnpm@8.15.6",
-  "engines": {
-    "node": ">=18"
-  }
+  "packageManager": "pnpm@9.12.0"
 }

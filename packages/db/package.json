@@ -1,0 +1,50 @@
+{
+  "name": "@amosbastian/drizzle",
+  "version": "0.4.3",
+  "private": true,
+  "description": "A database package utilizing drizzle orm.",
+  "license": "MIT",
+  "author": "amosbastian",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schema": {
+      "types": "./dist/schema/index.d.ts",
+      "default": "./dist/schema/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "db:check": "drizzle-kit check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:migrate:drop": "drizzle-kit drop",
+    "db:pull": "drizzle-kit introspect",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:up": "drizzle-kit up",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "biome lint --write .",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.0",
+    "effect": "3.10.8",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@amosbastian/tsconfig": "workspace:*",
+    "@types/node": "^22.8.6",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.27.0",
+    "tsx": "4.19.2"
+  },
+  "packageManager": "pnpm@9.12.0"
+}
