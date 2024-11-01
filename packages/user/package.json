@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@amosbastian/database": "workspace:^",
-    "@amosbastian/drizzle": "workspace:^",
     "@effect/sql": "0.18.12",
     "@effect/sql-drizzle": "0.17.1",
     "@effect/sql-pg": "0.19.3",

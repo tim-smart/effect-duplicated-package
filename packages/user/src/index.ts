@@ -1,7 +1,18 @@
 import { DatabaseLive, PgDrizzle } from "@amosbastian/database";
-import { userTable } from "@amosbastian/drizzle/schema";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { Effect } from "effect";
+import { pgTable, text, uniqueIndex } from "drizzle-orm/pg-core";
+
+export const userTable = pgTable(
+  "user",
+  {
+    id: text("id"),
+    email: text("email").notNull().unique(),
+  },
+  (t) => ({
+    emailIdx: uniqueIndex("email_idx").on(sql`lower(${t.email})`),
+  })
+);
 
 export class User extends Effect.Service<User>()("@core/User", {
   effect: Effect.gen(function* () {
