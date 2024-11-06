@@ -9,9 +9,7 @@ export const userTable = pgTable(
     id: text("id"),
     email: text("email").notNull().unique(),
   },
-  (t) => ({
-    emailIdx: uniqueIndex("email_idx").on(sql`lower(${t.email})`),
-  })
+  (t) => [{ emailIdx: uniqueIndex("email_idx").on(sql`lower(${t.email})`) }]
 );
 
 export class User extends Effect.Service<User>()("@core/User", {

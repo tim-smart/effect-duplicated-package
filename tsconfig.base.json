@@ -1,6 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Strictest",
   "compilerOptions": {
     "downlevelIteration": true,
     "strict": true,
@@ -26,13 +24,11 @@
     "forceConsistentCasingInFileNames": true,
 
     "lib": ["es2023"],
-    "module": "esnext",
+    "module": "NodeNext",
     "target": "es2022",
-    "moduleResolution": "bundler",
+    "moduleResolution": "NodeNext",
     "moduleDetection": "force",
     "resolveJsonModule": true,
-    "noEmit": true,
-    "incremental": true,
 
     "declaration": true,
     "declarationMap": true,
@@ -40,32 +36,19 @@
     "pretty": true,
     "preserveWatchOutput": true,
 
+    "incremental": true,
+    "composite": true,
+
     "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",
-    "baseUrl": "${configDir}",
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["${configDir}/src/*"]
+      "@amosbastian/api": ["./packages/api/src/index.ts"],
+      "@amosbastian/api/*": ["./packages/api/src/*"],
+      "@amosbastian/database": ["./packages/database/src/index.ts"],
+      "@amosbastian/database/*": ["./packages/database/src/*"],
+      "@amosbastian/user": ["./packages/user/src/index.ts"],
+      "@amosbastian/user/*": ["./packages/user/src/*"]
     }
   },
-  "include": [
-    "${configDir}/**/*.astro",
-    "${configDir}/**/*.ts",
-    "${configDir}/**/*.tsx",
-    "${configDir}/**/*.cts",
-    "${configDir}/**/*.ctsx",
-    "${configDir}/**/*.mts",
-    "${configDir}/**/*.mtsx",
-    "${configDir}/**/*.js",
-    "${configDir}/**/*.jsx",
-    "${configDir}/**/*.cjs",
-    "${configDir}/**/*.cjsx",
-    "${configDir}/**/*.mjs",
-    "${configDir}/**/*.mjsx",
-    "${configDir}/**/*.d.ts"
-  ],
-  "exclude": [
-    "${configDir}/node_modules",
-    "${configDir}/dist",
-    "${configDir}/playwright-report",
-    "${configDir}/test-results"
-  ]
+  "include": ["${configDir}/src/**/*"]
 }

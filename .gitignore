@@ -174,3 +174,4 @@ tsconfig.build.resolved.json
 
 # Wrangler
 .wrangler
+.direnv/

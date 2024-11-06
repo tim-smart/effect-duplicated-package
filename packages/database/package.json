@@ -26,7 +26,6 @@
     "effect": "3.10.8"
   },
   "devDependencies": {
-    "@amosbastian/tsconfig": "workspace:^",
     "@types/node": "22.8.6"
   },
   "packageManager": "pnpm@9.12.0"

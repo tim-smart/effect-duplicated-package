@@ -29,7 +29,6 @@
     "effect": "3.10.8"
   },
   "devDependencies": {
-    "@amosbastian/tsconfig": "workspace:^",
     "@types/node": "^22.8.6",
     "tsx": "4.19.2"
   },

@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@amosbastian/tsconfig':
-        specifier: workspace:^
-        version: link:packages/configuration/tsconfig
       '@biomejs/biome':
         specifier: 1.9.1
         version: 1.9.1
@@ -51,17 +48,12 @@ importers:
         specifier: 3.10.8
         version: 3.10.8
     devDependencies:
-      '@amosbastian/tsconfig':
-        specifier: workspace:^
-        version: link:../configuration/tsconfig
       '@types/node':
         specifier: ^22.8.6
         version: 22.8.6
       tsx:
         specifier: 4.19.2
         version: 4.19.2
-
-  packages/configuration/tsconfig: {}
 
   packages/database:
     dependencies:
@@ -78,9 +70,6 @@ importers:
         specifier: 3.10.8
         version: 3.10.8
     devDependencies:
-      '@amosbastian/tsconfig':
-        specifier: workspace:^
-        version: link:../configuration/tsconfig
       '@types/node':
         specifier: 22.8.6
         version: 22.8.6
@@ -91,14 +80,8 @@ importers:
         specifier: workspace:^
         version: link:../database
       '@effect/sql':
-        specifier: 0.18.12
-        version: 0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)
-      '@effect/sql-drizzle':
-        specifier: 0.17.1
-        version: 0.17.1(@effect/sql@0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(drizzle-orm@0.36.0(@types/pg@8.11.10)(pg@8.13.1)(postgres@3.4.5))(effect@3.10.8)
-      '@effect/sql-pg':
-        specifier: 0.19.3
-        version: 0.19.3(@effect/platform@0.69.13(effect@3.10.8))(@effect/sql@0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(effect@3.10.8)
+        specifier: 0.18.14
+        version: 0.18.14(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)
       drizzle-orm:
         specifier: ^0.36.0
         version: 0.36.0(@types/pg@8.11.10)(pg@8.13.1)(postgres@3.4.5)
@@ -106,9 +89,6 @@ importers:
         specifier: 3.10.8
         version: 3.10.8
     devDependencies:
-      '@amosbastian/tsconfig':
-        specifier: workspace:^
-        version: link:../configuration/tsconfig
       '@types/node':
         specifier: ^22.8.6
         version: 22.8.6
@@ -204,13 +184,6 @@ packages:
     peerDependencies:
       effect: ^3.10.8
 
-  '@effect/sql-drizzle@0.17.1':
-    resolution: {integrity: sha512-yPoV6Jr75dcyIE6wKInFGutmGxo0k2ncRpDDJ1rTlzPzUvUH7wa8xgdSz6JXeHkXzqwfTuSZmu06clHRrgrorg==}
-    peerDependencies:
-      '@effect/sql': ^0.18.12
-      drizzle-orm: ^0.31
-      effect: ^3.10.6
-
   '@effect/sql-drizzle@0.17.3':
     resolution: {integrity: sha512-GO/5FFWInwfCW280EpDNWS/4UJIms/6TpGzj/hdV9uG30NcwiUEpGmyI3BwBRv+2olzAuKCdYSisq9OO4qQCHQ==}
     peerDependencies:
@@ -224,13 +197,6 @@ packages:
       '@effect/platform': ^0.69.13
       '@effect/sql': ^0.18.14
       effect: ^3.10.8
-
-  '@effect/sql@0.18.12':
-    resolution: {integrity: sha512-S6SPiufGtbAIrSxvSqVLQE1xHLfa2WfmWfxsN3IEA/r03XPH5//pZ5L54ZH5tjtn+ErPxdjmPjLrNxanLrQ+tw==}
-    peerDependencies:
-      '@effect/experimental': ^0.30.12
-      '@effect/platform': ^0.69.11
-      effect: ^3.10.6
 
   '@effect/sql@0.18.14':
     resolution: {integrity: sha512-VljQfYxjNKC1oBCPsXcaBvErUQzmGRqEWtyJWey7qpbUk4gZxT3c7k/OXBnaSAofmAzaqOUWQdofnSShfNEgSw==}
@@ -921,25 +887,11 @@ snapshots:
       find-my-way-ts: 0.1.5
       multipasta: 0.2.5
 
-  '@effect/sql-drizzle@0.17.1(@effect/sql@0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(drizzle-orm@0.36.0(@types/pg@8.11.10)(pg@8.13.1)(postgres@3.4.5))(effect@3.10.8)':
-    dependencies:
-      '@effect/sql': 0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)
-      drizzle-orm: 0.36.0(@types/pg@8.11.10)(pg@8.13.1)(postgres@3.4.5)
-      effect: 3.10.8
-
   '@effect/sql-drizzle@0.17.3(@effect/sql@0.18.14(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(drizzle-orm@0.36.0(@types/pg@8.11.10)(pg@8.13.1)(postgres@3.4.5))(effect@3.10.8)':
     dependencies:
       '@effect/sql': 0.18.14(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)
       drizzle-orm: 0.36.0(@types/pg@8.11.10)(pg@8.13.1)(postgres@3.4.5)
       effect: 3.10.8
-
-  '@effect/sql-pg@0.19.3(@effect/platform@0.69.13(effect@3.10.8))(@effect/sql@0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(effect@3.10.8)':
-    dependencies:
-      '@effect/platform': 0.69.13(effect@3.10.8)
-      '@effect/sql': 0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)
-      '@opentelemetry/semantic-conventions': 1.27.0
-      effect: 3.10.8
-      postgres: 3.4.5
 
   '@effect/sql-pg@0.19.3(@effect/platform@0.69.13(effect@3.10.8))(@effect/sql@0.18.14(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(effect@3.10.8)':
     dependencies:
@@ -948,13 +900,6 @@ snapshots:
       '@opentelemetry/semantic-conventions': 1.27.0
       effect: 3.10.8
       postgres: 3.4.5
-
-  '@effect/sql@0.18.12(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)':
-    dependencies:
-      '@effect/experimental': 0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0)
-      '@effect/platform': 0.69.13(effect@3.10.8)
-      '@opentelemetry/semantic-conventions': 1.27.0
-      effect: 3.10.8
 
   '@effect/sql@0.18.14(@effect/experimental@0.30.14(@effect/platform-node@0.64.14(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)(ws@8.18.0))(@effect/platform@0.69.13(effect@3.10.8))(effect@3.10.8)':
     dependencies:

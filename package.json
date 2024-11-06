@@ -6,7 +6,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.1",
-    "@amosbastian/tsconfig": "workspace:^",
     "@tsconfig/node20": "20.1.4",
     "prettier": "^3.3.3",
     "tsx": "4.19.2",

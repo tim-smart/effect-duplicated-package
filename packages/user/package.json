@@ -21,14 +21,11 @@
   },
   "dependencies": {
     "@amosbastian/database": "workspace:^",
-    "@effect/sql": "0.18.12",
-    "@effect/sql-drizzle": "0.17.1",
-    "@effect/sql-pg": "0.19.3",
+    "@effect/sql": "0.18.14",
     "drizzle-orm": "^0.36.0",
     "effect": "3.10.8"
   },
   "devDependencies": {
-    "@amosbastian/tsconfig": "workspace:^",
     "@types/node": "^22.8.6"
   },
   "packageManager": "pnpm@9.12.0"
